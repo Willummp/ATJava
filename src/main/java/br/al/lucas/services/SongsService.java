@@ -1,27 +1,29 @@
 package br.al.lucas.services;
 
-import br.al.lucas.models.SpotifySongResponse;
-import br.al.lucas.models.SpotifySongsResponse;
+import br.al.lucas.models.Song;
 import retrofit2.Call;
 import retrofit2.http.*;
+
+import java.util.List;
 
 public interface SongsService {
     // LISTAR TODAS AS MÚSICAS
         @GET("/songs")
-        Call<SpotifySongsResponse> list();
+        Call<List<Song>> listAll();
+
     // LISTAR MUSICA PELO ID
         @GET("/songs/{id}")
-        Call<SpotifySongResponse> show(@Path("id") int id);
+        Call<Song> listById(@Path("id") int id);
 
     // ADICIONAR MÚSICA
         @POST("/songs")
-        Call<SpotifySongResponse> create(@Body SpotifySongResponse song);
+        Call<Song> insert(@Body Song song);
 
     // ATUALIZAR MÚSICA
        @PUT("/songs/{id}")
-       Call<SpotifySongResponse> update(@Path("id") int id, @Body SpotifySongResponse song);
+       Call<Song> update(@Path("id") int id, @Body Song song);
 
     // DELETAR MÚSICA
         @DELETE("/songs/{id}")
-        Call<SpotifySongResponse> delete(@Path("id") int id);
+        Call<Song> delete(@Path("id") int id);
 }
