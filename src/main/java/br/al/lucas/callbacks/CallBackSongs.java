@@ -34,7 +34,7 @@ public class CallBackSongs implements Callback<List<Song>>{
     // Método chamado quando a chamada ao servidor falha
     @Override
     public void onFailure(Call<List<Song>> call, Throwable t) {
-        // Imprime a mensagem de erro associada à exceção
+        // Imprime a mensagem de erro
         System.out.println(t.getMessage());
     }
 }

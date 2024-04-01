@@ -24,7 +24,7 @@ public class RestClient {
         // Se a instância ainda não foi criada, cria uma nova
         if (instance == null)
             instance = new RestClient();
-        return instance; // Retorna a instância existente ou recém-criada
+        return instance;
     }
 
     // Método para obter o serviço de músicas
