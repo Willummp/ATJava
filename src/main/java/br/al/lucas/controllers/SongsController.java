@@ -40,7 +40,7 @@ public class SongsController {
             return response(song, res);
         } else {
             res.status(204);
-            return "No Content";
+            return "Sem conteudo";
         }
     }
 
@@ -61,7 +61,7 @@ public class SongsController {
             return response(song, res);
         } else {
             res.status(204);
-            return "No Content";
+            return "Sem conteudo";
         }
     }
 
@@ -75,7 +75,7 @@ public class SongsController {
             return response(song, res);
         } else {
             res.status(204);
-            return "No Content";
+            return "Sem Conteudo";
         }
     }
 
@@ -87,7 +87,7 @@ public class SongsController {
             return response(song, res);
         } else {
             res.status(204);
-            return "No Content";
+            return "Sem Conteudo";
         }
     }
     private String response(Object object, Response res) {
